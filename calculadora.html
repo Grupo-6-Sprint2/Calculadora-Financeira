@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    quantos litros foram recebidos no último ano:
+    <input id="litrosRecebidosV"> <br>
+
+    quantos litros perdidos no último ano:
+    <input id="litrosPerdidos"> <br>
+
+    <button onclick="calculo()">calculo</button>
+
+    
+<div id="div"></div>
+
+</body>
+</html>
+
+<script>
+
+function calculo() {
+
+    var litros = Number(litrosPerdidos.value)
+    var litrosRecebidos = Number(litrosRecebidosV.value)
+    var mls = litros * 1000
+    var bolsas = mls / 450
+    var preço = bolsas * 585
+    var porcentagemPerda = (litros / litrosRecebidos) * 100
+
+
+div.innerHTML = `você perdeu ${bolsas} bolsas de sangue no último ano, isso equivale a ${porcentagemPerda}% do total e R$${preço} perdidos   
+`
+
+}
+
+
+</script>
+
