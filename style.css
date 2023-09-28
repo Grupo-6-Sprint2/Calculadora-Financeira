@@ -57,6 +57,14 @@ body{
     text-align: center;
 }
 
+#div b{
+    color: greenyellow;
+}
+
+#div i{
+    color: rgb(252, 71, 71);
+}
+
 .principal{
     display: flex;
     justify-content: center;

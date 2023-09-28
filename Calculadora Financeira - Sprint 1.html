@@ -37,8 +37,17 @@ var mls = litros * 1000
 var bolsas = mls / 450
 var preço = bolsas * 585
 var porcentagemPerda = (litros / litrosRecebidos) * 100
+var economia = litrosRecebidos * 0.25
+var melhoria = porcentagemPerda - economia
+var perdaMenor = (litros / melhoria) * 100
+var total = preço - perdaMenor
 
-div.innerHTML = `você perdeu ${bolsas} bolsas de sangue no último ano, isso equivale a ${porcentagemPerda}% do total e R$${preço} perdidos`
+div.innerHTML = `você perdeu ${bolsas} bolsas de sangue no último ano, isso equivale a ${porcentagemPerda}% do total de sangue recebido e <i>R$${preço}</i> perdidos`
+
+
+
+
+div.innerHTML += `<br>com a taxa de erro humano sendo reduzida completamente, você teria uma taxa de erro de apenas ${melhoria}%, economizando assim <b>R$${total}</b>`  
 
 }
 </script>
