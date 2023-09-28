@@ -7,42 +7,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <img src="./images/logo-ctrl-solutions.png" width="200px" height="100px">
+    <img src="logo-ctrl-solutions.png" width="200px" height="100px">
     <br>
         <i id="i_title"><b>Calculadora Financeira - Controle de armazenamento de bolsas de sangue</b></i><br><br>
 
     <div class="principal">
         <div id="div_form">
-            <span class="span_text">Digite a quantidade aproximada de bolsas de sangue armazenada (mensalmente) </span> <br> <br>
-            <input class="input_informacao" type="number" id="qtd_sangue" placeholder="10"> <br> <br>
+            <span class="span_text">Insira a quantidade média de litros de sangue armazenados no último ano</span> <br> <br>
+            <input class="input_informacao" type="number" id="litrosRecebidosV" placeholder="100"> <br> <br>
 
-            <span class="span_text">Digite o desperdício aproximado desse sangue por más condições de armazenamento (mensalmente)</span> <br> <br>
-            <input class="input_informacao" type="number" id="desperdicio_sangue" placeholder="20"> <br><br>
+            <span class="span_text">Insira a quantidade de litros de sangue perdidos por conta da má conduta de temperatura no último ano</span> <br> <br>
+            <input class="input_informacao" type="number" id="litrosPerdidos" placeholder="20"> <br><br>
 
 
-            <button id="button_botao" onclick="economia()">
+            <button id="button_botao" onclick="calculo()">
             <b>Ver resultado!</b>
             </button>
         </div>
     </div>
-    <div id="div1"></div>
+    <div id="div"></div>
 </body>
 </html>
 <script>
-    function economia() {
-        var qtdSangue = Number(qtd_sangue.value)
-        var desperdicioSangue = Number(desperdicio_sangue.value)
-        var soluçãoDesperdicio = desperdicioSangue * 0.7
-        var dinheiro = soluçãoDesperdicio * 585
-        var porcentagemPerda = desperdicioSangue * 100 /  qtdSangue
-        // Quantidade disperdiçada * cem por cento / quantidade de bolsas de sangue
+function calculo() {
 
-        div1.innerHTML = `<br>
-        Com base nos calculos feitos você tem uma perda total de ${porcentagemPerda}% de bolsas de sangue.<br>
-         Com base na condição de sangue informada (<u>${qtdSangue}</u> Litros armazenados, <u>${desperdicioSangue}</u> Litros desperdiçados), <br> Nossa solução promete uma economia de até <b>${soluçãoDesperdicio} Litros</b> (<u>70% salvos!</u>) e uma redução de <b>R$ ${dinheiro}</b> nos gastos! <br>
-        `
-    }
-    // desperdicio / qtd armazenada = x / 100 -> regra de 3
+var litros = Number(litrosPerdidos.value)
+var litrosRecebidos = Number(litrosRecebidosV.value)
+var mls = litros * 1000
+var bolsas = mls / 450
+var preço = bolsas * 585
+var porcentagemPerda = (litros / litrosRecebidos) * 100
+
+div.innerHTML = `você perdeu ${bolsas} bolsas de sangue no último ano, isso equivale a ${porcentagemPerda}% do total e R$${preço} perdidos`
+
+}
 </script>
 
 
