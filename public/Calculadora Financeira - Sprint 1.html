@@ -12,76 +12,66 @@
 
         <div class="logo">
             <img src="C:\Users\scort\Desktop\os baguio da faculdade\pesquisa e inovação\sprint 2\Calculadora-Financeira\public\assets\imgs\logoBranca.png" width="300px">
-            </div>
+        </div>
 
     </div>
 
+ <br>
 
-
-
-    <br>
         <i id="i_title"><b>Calculadora Financeira - Controle de armazenamento de bolsas de sangue</b></i><br><br>
 
-        
         <!-- AMBOS OS CARDS -->
      
-    <div class="principal">
+<div class="principal">
 
-    
+    <div class="form">
 
-            <div class="form">
+        <span class="span_text">Insira a quantidade média de litros de sangue armazenados no último ano</span> <br>
+        <input class="input_informacao" type="number" id="litrosRecebidosV" placeholder="100"> <br> <br>
 
-            <span class="span_text">Insira a quantidade média de litros de sangue armazenados no último ano</span> <br>
-            <input class="input_informacao" type="number" id="litrosRecebidosV" placeholder="100"> <br> <br>
-
-            <span class="span_text">Insira a quantidade de litros de sangue perdidos por conta da má conduta de temperatura no último ano</span> <br> 
-            <input class="input_informacao" type="number" id="litrosPerdidos" placeholder="20"> <br><br>
+        <span class="span_text">Insira a quantidade de litros de sangue perdidos por conta da má conduta de temperatura no último ano</span> <br> 
+        <input class="input_informacao" type="number" id="litrosPerdidos" placeholder="20"> <br><br>
 
 
-            <button id="button_botao" onclick="calculo()">
-            <b>Ver resultado!</b>
-            </button>
+        <button id="button_botao" onclick="calculo()">
+        <b>Ver resultado!</b>
+        </button>
 
-            </div>
+    </div>
 
-        <div class="mostrar">
-            <div class="resultado" id="div">
-                <img class="sifrao" src="C:\Users\scort\Desktop\os baguio da faculdade\pesquisa e inovação\sprint 2\Calculadora-Financeira\public\assets\imgs\sifrão_interrogação.png" alt="" height="180px" style="margin-right: 0;">
-            </div> 
-        </div>
+    <div class="mostrar">
+        <div class="resultado" id="div">
+            <img class="sifrao" src="C:\Users\scort\Desktop\os baguio da faculdade\pesquisa e inovação\sprint 2\Calculadora-Financeira\public\assets\imgs\sifrão_interrogação.png" alt="" height="180px" style="margin-right: 0;">
+        </div> 
+
+    </div>
 
 </div>
 
 <div>
 
-    <!-- INFORMAÇÕES SOBRE O CALCULO -->
+<!-- INFORMAÇÕES SOBRE O CALCULO -->
 
 <div class="lugarPinfo">
 
 <!-- lugar que tudo vai ficar -->
+
 <div class="informacoes">
 
-   <!-- imagem da bolsa -->
-   <div class="bolsa">
+<!-- imagem da bolsa -->
+<div class="bolsa">
     <img onclick="informações()" src="https://static.vecteezy.com/system/resources/previews/024/097/589/original/donation-blood-bag-free-png.png" alt="">
-    </div>
-   <!-- fim da imagem -->
-
+</div>
+<!-- fim da imagem -->
 
 <!-- aqui aparece as informações do calculo -->
 
 <div id="info">
 
-
-
 1 bolsa de sangue equivale a 450ml de sangue <Br>
 1 bolsa de sangue equivale a R$585,00
+
 </div>
-
-
-
-
-
 
 </body>
 </html>
@@ -103,18 +93,6 @@ div.innerHTML = `você perdeu ${bolsas} bolsas de sangue no último ano, isso eq
 if (economia > porcentagemPerda) {div.innerHTML += `<br>com nossa solução a taxa de erro humano será reduzida completamente, o prejuízo será reduzido em <b>100%</b>`}
 else {div.innerHTML += `<br>com a taxa de erro humano sendo reduzida completamente, você teria uma taxa de erro de apenas ${melhoria}%, economizando assim <b>R$${total}</b>`} 
 }
-
-function informações() {
-
-info.innerHTML = 
-
-`
-1 bolsa de sangue equivale a 450ml de sangue <Br>
-1 bolsa de sangue equivale a R$585,00
-`
-}
-
-
 </script>
 
 

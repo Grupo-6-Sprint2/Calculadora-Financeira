@@ -1,5 +1,4 @@
 
-
 *{
     font-family: Arial;
 }
@@ -129,12 +128,7 @@ to {transform: rotate(-0.04turn);}
     text-decoration: underline;
 }
 
-
-
-
-
 /* lugarP/info */
-
 
 .lugarPinfo {
     display: flex;
@@ -175,4 +169,3 @@ to {color:  rgb(182, 22, 67);}
 from {width: 1000px;}
 to {width:  650px;}
 }
-
