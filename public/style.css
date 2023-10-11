@@ -149,8 +149,8 @@ to {transform: rotate(-0.04turn);}
 }
 
 #info {
-width: 650px;
-color: rgb(182, 22, 67);
+width: 750px;
+color: rgb(255, 255, 255);
 font-weight: 800;
 display: flex;
 justify-content: end;
@@ -164,8 +164,8 @@ animation-duration: 4s;
 @keyframes aparecendo {
 
 from {color: rgba(252, 71, 71, 0);}
-to {color:  rgb(182, 22, 67);}
+to {color:  rgb(255, 255, 255);}
 
 from {width: 1000px;}
-to {width:  650px;}
+to {width:  750px;}
 }
